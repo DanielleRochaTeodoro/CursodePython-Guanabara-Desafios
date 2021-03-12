@@ -1,0 +1,11 @@
+print('APROVANDO EMPRESTIMO')
+
+valorCasa = float(input('Qual o valor da casa: '))
+salario = float(input('Qual é o seu salário: '))
+prazo = int(input('Qual o prazo do financiamento em meses: '))
+
+valorPrestação = valorCasa/prazo
+if valorPrestação < (salario*0.30):
+    print('Seu emprestimo de {} foi aprovado'.format(valorCasa))
+else:
+    print('Emprestimo negado. O valor da prestação de {:.2f} ultrapassou 30% do seu salario. '.format(valorPrestação))
