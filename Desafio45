@@ -1,0 +1,24 @@
+print('JOKEMPO')
+
+import random
+minhaEscolha = str(input('Escolha papel, pedra ou tesoura:'))
+escolhas = ['papel', 'pedra', 'tesoura']
+outraEscolha = random.choice(escolhas)
+
+print('a minha escolha foi {}'.format(minhaEscolha))
+print('a sua escolha foi {}'.format(outraEscolha))
+
+if minhaEscolha == 'pedra' and outraEscolha == 'tesoura':
+    print('Pedra quebra Tesoura! Voce ganhou!')
+elif minhaEscolha == 'papel' and outraEscolha == 'pedra':
+    print('Papel embrulha a Pedra! Voce ganhou!')
+elif minhaEscolha == 'tesoura' and outraEscolha == 'papel':
+    print('Tesoura corta papel! Voce ganhou!')
+elif outraEscolha == 'pedra' and minhaEscolha == 'tesoura':
+    print('Pedra quebra Tesoura! Você perdeu!')
+elif outraEscolha == 'papel' and minhaEscolha == 'pedra':
+    print('Papel embrulha a Pedra! Você perdeu!')
+elif outraEscolha == 'tesoura' and minhaEscolha == 'papel':
+    print('Tesoura corta papel! Você perdeu!')
+else:
+    print('Empate')
