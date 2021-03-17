@@ -1,12 +1,20 @@
 from datetime import date
-anoNasc = int(input("Digite o ano de seu nascimento: "))
-dtAtual = date.today().year
-idade = dtAtual-anoNasc
-if idade<18:
-    print("com {} vocÊ ainda não pode se alistar, faltam {} anos".format(idade, 18-idade))
-    print("Você só podera se alistar em {}".format(dtAtual+(18-idade)))
-elif idade == 18:
-    print("Você deve se alistar. Tem {} anos".format(idade))
+
+sexo = str(input('Qual o seu sexo? Digte M para masculino e F para feminino: ')).upper()
+
+if sexo == 'F':
+    print('Você é dispensada de se alistar. Alistamento obrigatório é somente para sexo masculino')
 else:
-    print("Você não pode se alistar com {}, já passaram {} anos do prazo".format(idade,idade-18))
-    print('Voce deveria ter se alistado em {}'.format(dtAtual-(idade-18)))
+    print('Você deve se alistar')
+    anoNasc = int(input("Digite o ano de seu nascimento: "))
+    dtAtual = date.today().year
+    idade = dtAtual-anoNasc
+    if idade<18:
+        print("com {} vocÊ ainda não pode se alistar, faltam {} anos".format(idade, 18-idade))
+        print("Você só podera se alistar em {}".format(dtAtual+(18-idade)))
+    elif idade == 18:
+        print("Você deve se alistar. Tem {} anos".format(idade))
+    else:
+        print("Você não pode se alistar com {}, já passaram {} anos do prazo".format(idade,idade-18))
+        print('Voce deveria ter se alistado em {}'.format(dtAtual-(idade-18)))
+
