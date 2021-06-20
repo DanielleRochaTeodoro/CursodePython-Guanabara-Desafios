@@ -16,6 +16,7 @@ elif formaPgto == 3:
 else:
     qtdPtrestações = int(input('Quantas prestações: '))
     print('O valor a ser pago será de R${}. Você pagará {} prestações de {:.2f}'.format(preco+(preco*0.20),qtdPtrestações,((preco+(preco*0.20))/qtdPtrestações)))
+    print('Voce pagará no final {}'.format((qtdPtrestações*(((preco+(preco*0.20))/qtdPtrestações)))))
 
 
 
