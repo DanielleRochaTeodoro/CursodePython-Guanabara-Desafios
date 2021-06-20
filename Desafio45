@@ -21,6 +21,6 @@ elif outraEscolha == 'papel' and minhaEscolha == 'pedra':
 elif outraEscolha == 'tesoura' and minhaEscolha == 'papel':
     print('Tesoura corta papel! Computador ganhou!')
 else:
-    print('Empate')
+    print('Empate' )
 
 
