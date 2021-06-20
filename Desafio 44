@@ -13,12 +13,9 @@ elif formaPgto == 2:
     print('O valor a ser pago será de R${}'.format(preco-(preco*0.05)))
 elif formaPgto == 3:
     print('O valor pago será R${}. Você pagará 2 prestações de {:.2f}'.format(preco,(preco/2)))
-else:
+elif formaPgto == 4:
     qtdPtrestações = int(input('Quantas prestações: '))
     print('O valor a ser pago será de R${}. Você pagará {} prestações de {:.2f}'.format(preco+(preco*0.20),qtdPtrestações,((preco+(preco*0.20))/qtdPtrestações)))
     print('Voce pagará no final {}'.format((qtdPtrestações*(((preco+(preco*0.20))/qtdPtrestações)))))
-
-
-
-
-
+else:
+    print('OPCAO INVALIDA! TENTE NOVAMENTE')
