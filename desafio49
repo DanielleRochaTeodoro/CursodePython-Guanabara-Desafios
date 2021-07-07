@@ -1,4 +1,4 @@
 n = int(input('Digite um numero: '))
 print('A tabuada de {} é: '.format(n))
 for c in range(1,11):
-    print('{}*{} = {}'.format(n,c,c*n))
+    print('{:2} x {:2} = {:2}'.format(n,c,c*n))
