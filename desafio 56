@@ -6,12 +6,12 @@ for c in range(1,5):
     idade = int(input('Digite a idade da {}ª pessoa: '.format(c)))
     sexo = str(input('Digite o sexo da {}ª pessoa: '.format(c))).upper()
     somaIdade = somaIdade + idade
-    if idade>maiorIdade:
+    if idade>maiorIdade and sexo == 'M':
         maiorIdade = idade
         nomeMaisVelho = nome
     if idade>20 and sexo == 'F':
         idade20 = idade20+1
 
 print('A idade media do grupo é {}'.format(somaIdade/c))
-print('O nome da pessoa mais velha é {}'.format(nomeMaisVelho))
+print('O nome do homem mais velho é {}'.format(nomeMaisVelho))
 print('{} mulheres tem mais de 20 anos'.format(idade20))
