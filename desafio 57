@@ -1,0 +1,6 @@
+s = 'F'
+while s=='F':
+    s = str(input('Digite o sexo F: '))
+    if s != 'F':
+        while s!='F':
+            s = str(input('Digite novamente o sexo F'))
