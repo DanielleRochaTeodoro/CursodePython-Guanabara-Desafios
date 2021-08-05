@@ -1,0 +1,13 @@
+import random
+num = 1
+escolhido = random.randint(1,10)
+ne = 0
+
+while num!=escolhido:
+    num = float(input('Digite um numero: '))
+    escolhido = random.randint(1, 10)
+    if num == escolhido:
+        print('Você acertou')
+    else:
+        ne += 1
+print('Você tentou {} vezes, ate acertar'.format(ne))
