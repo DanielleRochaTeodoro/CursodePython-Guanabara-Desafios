@@ -1,6 +1,6 @@
 import random
 
-ne = 0
+ne = 1
 num = float(input('Digite um numero: '))
 escolhido = random.randint(1,10)
 while num!=escolhido:
@@ -13,3 +13,5 @@ while num!=escolhido:
         escolhido = random.randint(1, 10)
 
 print('Você tentou {} vezes, ate acertar'.format(ne))
+
+
