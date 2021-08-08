@@ -12,5 +12,5 @@ while num!=escolhido:
         num = float(input("o numero escolhido é maior, tente novamente"))
         
 
-print('Você tentou {} vezes, ate acertar'.format(ne))
+print('Você  tentou {} vezes, ate acertar'.format(ne))
 
