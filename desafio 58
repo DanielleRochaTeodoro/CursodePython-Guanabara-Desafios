@@ -7,11 +7,10 @@ while num!=escolhido:
     ne += 1
     if num>escolhido:
         num = float(input("o numero escolhido é menor, tente novamente"))
-        escolhido = random.randint(1, 10)
+
     else:
         num = float(input("o numero escolhido é maior, tente novamente"))
-        escolhido = random.randint(1, 10)
+        
 
 print('Você tentou {} vezes, ate acertar'.format(ne))
-
 
