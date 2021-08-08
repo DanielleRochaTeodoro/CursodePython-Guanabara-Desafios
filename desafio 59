@@ -1,0 +1,27 @@
+op = 1
+print("OPÇÕES DISPONIVEIS: ")
+print('''
+         [1] SOMAR
+         [2] MULTIPLICAR
+         [3] MAIOR
+         [4] NOVOS NUMEROS
+         [5] ENCERRAR PROGRAMA''')
+num1 = float(input("Digit o primeiro numero: "))
+num2 = float(input("Digite o seundo numero: "))
+while op!=5:
+    op = int(input("Digite a opcao desejada: "))
+    if op == 1:
+        print("o valor da soma é: {}".format(num1+num2))
+    if op == 2:
+        print("o valor da multiplicação é: {}".format(num1 * num2))
+    if op == 3:
+        if num1>num2:
+            print("o maior numero é: {}".format(num1))
+        else:
+            print("o maior numero é {}".format(num2))
+    if op == 4:
+        num1 = float(input("Digite outro numero: "))
+        num2 = float(input("Digite outro numero"))
+    if op == 5:
+        print("Programa encerrado")
+
