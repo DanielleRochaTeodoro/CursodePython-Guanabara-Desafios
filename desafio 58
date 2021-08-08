@@ -1,13 +1,15 @@
 import random
-num = 1
-escolhido = random.randint(1,10)
-ne = 0
 
+ne = 0
+num = float(input('Digite um numero: '))
+escolhido = random.randint(1,10)
 while num!=escolhido:
-    num = float(input('Digite um numero: '))
-    escolhido = random.randint(1, 10)
-    if num == escolhido:
-        print('Você acertou')
+    ne += 1
+    if num>escolhido:
+        num = float(input("o numero escolhido é menor, tente novamente"))
+        escolhido = random.randint(1, 10)
     else:
-        ne += 1
+        num = float(input("o numero escolhido é maior, tente novamente"))
+        escolhido = random.randint(1, 10)
+
 print('Você tentou {} vezes, ate acertar'.format(ne))
