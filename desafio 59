@@ -30,4 +30,6 @@ while op!=5:
         num2 = float(input("Digite outro numero"))
     if op == 5:
         print("Programa encerrado")
+    if op >5:
+        op = int(input("opcao invalida! Tente novamente: "))
 
