@@ -1,6 +1,6 @@
 import random
 
-ne = 1
+ne = 0
 num = float(input('Digite um numero: '))
 escolhido = random.randint(1,10)
 while num!=escolhido:
