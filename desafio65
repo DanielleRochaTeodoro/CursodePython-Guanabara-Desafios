@@ -8,9 +8,11 @@ while resp == 'S':
     resp = str(input("Deseja continuar: ")).strip().upper()
     cont +=1
     soma = soma+num
-    if num>maior:
-        maior = num
+    if cont == 1:
+        maior = menor = num
     else:
-        menor = num
-
-print("A media entre os numero digitados foi {}. O maior numero digitado foi {} e o menor foi {}".format((soma/cont),maior,menor))
+        if num>maior:
+            maior = num
+        if num<menor:
+            menor = num
+print("A media entre os {} numero digitados foi {}. O maior numero digitado foi {} e o menor foi {}".format(cont,(soma/cont),maior,menor))
