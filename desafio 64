@@ -1,4 +1,4 @@
-num = 1
+num = 0
 soma = 0
 tot = 0
 while num!=999:
