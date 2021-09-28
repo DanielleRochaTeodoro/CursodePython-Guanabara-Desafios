@@ -1,0 +1,23 @@
+idade18 = 0
+sexom = 0
+sexof = 0
+while True:
+    idade = int(input("Qual a sua idade: "))
+    sexo = ' '
+    while sexo not in "MF":
+        sexo = str(input("Qual o seu sexo: ")).upper().strip()
+    if idade > 18:
+        idade18 += 1
+    if sexo in 'Mn':
+        sexom += 1
+    if sexo in 'Ff' and idade < 20:
+        sexof += 1
+    opcao = ' '
+    while opcao not in "NS":
+        opcao = str(input("Deseja continuar S/N: ")).upper().strip()
+    if opcao == 'N':
+            break
+
+print('Programa encerrado')
+print(f"Foram cadastradas 2 pessoas {idade18} com mais de 18 anos; {sexom} homens e {sexof} mulheres com menos de 20 anos")
+
