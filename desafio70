@@ -1,5 +1,5 @@
 totcompra = 0
-precomenosmil = 0
+precomaismil = 0
 menorpreco = 0
 nomemenorpreco = ' '
 cont = 0
@@ -8,8 +8,8 @@ while True:
     preco = float(input("Preco do produto: "))
     totcompra = totcompra+preco
     cont+=1
-    if preco<1000:
-        precomenosmil+=1
+    if preco>1000:
+        precomaismil+=1
     if cont ==1:
         menorpreco = preco
         nomemenorpreco = nome
@@ -21,7 +21,9 @@ while True:
         opcao = str(input("Deseja continuar S/N: ")).upper().strip()[0]
     if opcao == "N":
         break
-print(f'''O Total da compra foi {totcompra};
-Temos {precomenosmil} produto custando menos de R$1000,00
+print(f'''O Total da compra foi {totcompra:.2f};
+Temos {precomaismil:.2f} produto custando mais de R$1000,00
 O produto mais barato é {nomemenorpreco}''')
+
+
 
