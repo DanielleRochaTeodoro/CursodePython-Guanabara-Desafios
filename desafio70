@@ -10,10 +10,7 @@ while True:
     cont+=1
     if preco>1000:
         precomaismil+=1
-    if cont ==1:
-        menorpreco = preco
-        nomemenorpreco = nome
-    if preco<menorpreco:
+    if cont ==1 or preco<menorpreco:
         menorpreco = preco
         nomemenorpreco = nome
     opcao = ' '
@@ -24,6 +21,8 @@ while True:
 print(f'''O Total da compra foi {totcompra:.2f};
 Temos {precomaismil:.2f} produto custando mais de R$1000,00
 O produto mais barato é {nomemenorpreco}''')
+
+
 
 
 
