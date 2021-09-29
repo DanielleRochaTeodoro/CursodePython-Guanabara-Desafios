@@ -1,0 +1,27 @@
+totcompra = 0
+precomenosmil = 0
+menorpreco = 0
+nomemenorpreco = ' '
+cont = 0
+while True:
+    nome = str(input("Nome do produto: "))
+    preco = float(input("Preco do produto: "))
+    totcompra = totcompra+preco
+    cont+=1
+    if preco<1000:
+        precomenosmil+=1
+    if cont ==1:
+        menorpreco = preco
+        nomemenorpreco = nome
+    if preco<menorpreco:
+        menorpreco = preco
+        nomemenorpreco = nome
+    opcao = ' '
+    while opcao not in "N/S":
+        opcao = str(input("Deseja continuar S/N: ")).upper().strip()[0]
+    if opcao == "N":
+        break
+print(f'''O Total da compra foi {totcompra};
+Temos {precomenosmil} produto custando menos de R$1000,00
+O produto mais barato é {nomemenorpreco}''')
+
