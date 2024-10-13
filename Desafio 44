@@ -1,21 +1,14 @@
-preco = float(input('Digite o valor do produto: '))
-print('FORMAS DE PAGTO')
-print('1 - à vista dinheiro/cheque: 10% de desconto')
-print('2 - à vista no cartão: 5% de desconto')
-print('3 - em até 2x no cartão: preço formal ')
-print('4 - 3x ou mais no cartão: 20% de juros')
 
-formaPgto = int(input('Digite a forma de pagamento escolhida: '))
-
-if formaPgto == 1:
-    print('O valor a ser pago será de R${}'.format(preco-(preco*0.10)))
-elif formaPgto == 2:
-    print('O valor a ser pago será de R${}'.format(preco-(preco*0.05)))
-elif formaPgto == 3:
-    print('O valor pago será R${}. Você pagará 2 prestações de {:.2f}'.format(preco,(preco/2)))
-elif formaPgto == 4:
-    qtdPtrestações = int(input('Quantas prestações: '))
-    print('O valor a ser pago será de R${}. Você pagará {} prestações de {:.2f}'.format(preco+(preco*0.20),qtdPtrestações,((preco+(preco*0.20))/qtdPtrestações)))
-    print('Voce pagará no final {}'.format((qtdPtrestações*(((preco+(preco*0.20))/qtdPtrestações)))))
+formapgto = str(input('Digite D para dinheiro, CH para cheque ou CA para cartão: ')).upper()
+prazopgto = str(input('Digite 1 para a vista, 2 para 2x ou 3 para 3x: '))
+precoproduto = float(input('Digite o preco do produto'))
+if formapgto == 'D' and prazopgto == '1' or formapgto == 'CH' and prazopgto == '1':
+    print(f'Voce tera 10% de desconto e o valor a pagar será de {precoproduto-(precoproduto*0.10)}')
+elif formapgto=='CA' and prazopgto == '1':
+    print(f'Voce tera 5% de desconto e o valor a pagar será de {precoproduto - (precoproduto * 0.05)}')
+elif formapgto== 'CA' and prazopgto == '2':
+    print(f'Voce pagara o preco do produto sem desconto que é de {precoproduto} em duas vezes')
+elif formapgto=='CA' and prazopgto=='3':
+    print(f'Voce pagará juros de 20% e o valor a pagar será de {precoproduto + (precoproduto * 0.20)}')
 else:
-    print('OPCAO INVALIDA! TENTE NOVAMENTE')
+    print('Não é permitido outra forma de pagto ou prazo')
