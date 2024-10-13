@@ -1,7 +1,7 @@
 
 formapgto = str(input('Digite D para dinheiro, CH para cheque ou CA para cartão: ')).upper()
-prazopgto = str(input('Digite 1 para a vista, 2 para 2x ou 3 para 3x: '))
-precoproduto = float(input('Digite o preco do produto'))
+prazopgto = str(input('Digite 1 para a vista, 2 para 2x ou 3 para 3x ou mais: '))
+precoproduto = float(input('Digite o preco do produto: '))
 if formapgto == 'D' and prazopgto == '1' or formapgto == 'CH' and prazopgto == '1':
     print(f'Voce tera 10% de desconto e o valor a pagar será de {precoproduto-(precoproduto*0.10)}')
 elif formapgto=='CA' and prazopgto == '1':
@@ -9,6 +9,7 @@ elif formapgto=='CA' and prazopgto == '1':
 elif formapgto== 'CA' and prazopgto == '2':
     print(f'Voce pagara o preco do produto sem desconto que é de {precoproduto} em duas vezes')
 elif formapgto=='CA' and prazopgto=='3':
-    print(f'Voce pagará juros de 20% e o valor a pagar será de {precoproduto + (precoproduto * 0.20)}')
+    qtdparcelas= int(input("Digite a quantidade de parcelas desejada: "))
+    print(f'Voce pagará juros de 20% e o valor a pagar será de {precoproduto + (precoproduto * 0.20)}, em {qtdparcelas} parcelas de {(precoproduto + (precoproduto * 0.20))/qtdparcelas}')
 else:
     print('Não é permitido outra forma de pagto ou prazo')
