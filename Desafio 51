@@ -1,0 +1,7 @@
+pt = int(input('Digite o primeiro termo da da PA: '))
+r = int(input('Digite a razao da PA: '))
+print('o 10 primeiro termo da PA são:')
+
+for c in range(10):
+    print(pt)
+    pt = pt+r
