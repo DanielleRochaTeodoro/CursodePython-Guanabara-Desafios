@@ -5,8 +5,7 @@ count = 0
 numcomp = random.randint(0, 10)
 numpessoa = int(input('Digite um numero entre 0 a 10 '))
 while numcomp != numpessoa:
-    print(f'Voce não acertou, numero computador foi {numcomp} e o seu numero foi {numpessoa}')
-    numcomp = random.randint(0, 10)
+    print(f'Voce não acertou!')
     numpessoa = int(input('Digite um numero entre 0 a 10 '))
     count = count + 1
     if numcomp == numpessoa:
